@@ -1,3 +1,7 @@
+//Saketh Lakshmanan Sathiskumar
+//UCID: sl778 
+//Date submitted: 02/08/2023 
+
 // first button to hide
 document.getElementById("hide").addEventListener("click", function()
 {
