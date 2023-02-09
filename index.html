@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Saketh's Resume</title>
+</head>
+<body>
+    <div class = "container">
+        <h2 class="text-center">Name</h2>
+        <img src="profilePic.jpeg" alt="Profile Image" width="300" height="300">
+        <p>Hi, my name is Saketh Lakshmanan. I am a senior at NJIT. I love to play football and make art.</p>
+        <p>Phone: 973-____-4901</p>
+        <p>Email: sl778@njit.edu</p>
+        <p>Github: <a href="https://github.com/sakethl20">https://github.com/sakethl20</a></p>
+    </div>
+    <div>
+        <button id="hide">Hide Information</button>
+        <button id="show">Show Information</button>
+    </div>
+    <div>
+        <h1>Main</h1>
+        <div>
+            <h2 class="text-center">Education</h2>
+            <table id = "firstTable">
+                <tr>
+                    <th>University</th>
+                    <th>Degree</th>
+                    <th>Graduation Date</th>
+                </tr>
+                <tr>
+                    <th>New Jersey Institute of Technology</th>
+                    <th>Masters in Computer Science</th>
+                    <th>December 2024</th>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2 class="text-center">Experience</h2>
+            <table id = "secondTable">
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <th>Google</th>
+                    <th>Entry level software engineer</th>
+                    <th>December 2022 - Present</th>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2 class="text-center">Skills</h2>
+            <table id = "thirdTable">
+                <tr>
+                    <th>Applications</th>
+                    <th>Languages</th>
+                    <th>Interpersonal</th>
+                </tr>
+                <tr>
+                    <th>Redwood, Django</th>
+                    <th>Python, Java, C++, HTML, CSS</th>
+                    <th>Leadership, Cooperative, Driven, Listener</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div>
+        <h1>Contact Form</h1>
+        <form>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject"><br><br>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname"><br><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+  
