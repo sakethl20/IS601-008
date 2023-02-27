@@ -123,7 +123,7 @@ class BankAccount:
 bank_act = BankAccount(314929, 1000, 'Saketh Lakshmanan')
 bank_act.deposit(200)
 bank_act.withdraw(700)
-print("Bank Account ballance: ", bank_act.get_balance())
+print("Bank Account balance: ", bank_act.get_balance())
 
 # Part 2: Checking Account Class
 # 1. Create CheckingAccount class that inherits from BankAccount
@@ -134,7 +134,8 @@ print("Bank Account ballance: ", bank_act.get_balance())
         # apply_transaction_fees(self): Subtracts the transaction fees from current balance.
         
 class Checking_Account(BankAccount):
-    def __init__(self, transaction_fees):
+    def __init__(self, account_number, balance, account_holder, transaction_fees):
+        super().__init__(account_number, balance, account_holder)
         self.transaction_fees = transaction_fees
     
     def apply_transaction_fees(self):
@@ -144,9 +145,9 @@ class Checking_Account(BankAccount):
 # pass the transaction fees as 34.50 and call the apply_transaction_fees() method
 # then print the total balance of the account (call the get_balance() method)
 
-checking_act = Checking_Account(34.50)
-Checking_Account.apply_transaction_fees()
-print(Checking_Account.get_balance())
+checking_act = Checking_Account(314929, 500, 'Saketh Lakshmanan', 34.50)
+checking_act.apply_transaction_fees()
+print("Checking Account balance: ", checking_act.get_balance())
 
 # Part 3: Savings Account Class
 # 1. Create SavingsAccount class that inherits from BankAccount.
@@ -157,8 +158,10 @@ print(Checking_Account.get_balance())
         # calculate_interest(self): Calculates and adds the interest to the currentbalance.
 
 class SavingsAccount(BankAccount):
-    def __init__(self, interest_rate):
+    def __init__(self, account_number, balance, account_holder, interest_rate):
+        super().__init__(account_number, balance, account_holder)
         self.interest_rate = interest_rate
+    
     def calculate_interest(self):
         self.balance += (self.interest_rate * self.balance)
 
@@ -166,6 +169,6 @@ class SavingsAccount(BankAccount):
 # pass the interest rate as 0.12 and call the calculate_interest() method
 # then print the total balance of the account (call the get_balance() method)
 
-savings_acct = SavingsAccount(0.12)
+savings_acct = SavingsAccount(314929, 1000, 'Saketh Lakshmanan', 0.12)
 savings_acct.calculate_interest()
-savings_acct.get_balance()
+print("Savings Account balance: ", savings_acct.get_balance())
