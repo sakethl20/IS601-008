@@ -145,7 +145,7 @@ class Checking_Account(BankAccount):
 # pass the transaction fees as 34.50 and call the apply_transaction_fees() method
 # then print the total balance of the account (call the get_balance() method)
 
-checking_act = Checking_Account(314929, 500, 'Saketh Lakshmanan', 34.50)
+checking_act = Checking_Account(314929, bank_act.balance, 'Saketh Lakshmanan', 34.50)
 checking_act.apply_transaction_fees()
 print("Checking Account balance: ", checking_act.get_balance())
 
@@ -169,6 +169,6 @@ class SavingsAccount(BankAccount):
 # pass the interest rate as 0.12 and call the calculate_interest() method
 # then print the total balance of the account (call the get_balance() method)
 
-savings_acct = SavingsAccount(314929, 1000, 'Saketh Lakshmanan', 0.12)
+savings_acct = SavingsAccount(314929, checking_act.balance, 'Saketh Lakshmanan', 0.12)
 savings_acct.calculate_interest()
 print("Savings Account balance: ", savings_acct.get_balance())
